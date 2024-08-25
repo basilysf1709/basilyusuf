@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basil Yusuf - Software Engineer</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #f5f5f5;
+            --text-color: #333333;
+            --header-color: #16a085;
+            --link-color: #16a085;
+            --highlight-color: #2980b9;
+            --secondary-color: #2980b9;
+        }
+
+        body {
+            font-family: 'Courier New', monospace;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s, color 0.3s;
+            line-height: 1.6;
+        }
+
+        body.dark-mode {
+            --bg-color: #001a00;
+            --text-color: #00ff00;
+            --header-color: #16a085;
+            --link-color: #16a085;
+            --highlight-color: #2980b9;
+            --secondary-color: #2980b9;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            border-bottom: 2px solid var(--header-color);
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        nav {
+            display: flex;
+            gap: 15px;
+        }
+
+        nav a {
+            color: var(--link-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin: 0 0 10px 0;
+            color: var(--header-color);
+        }
+
+        h2 {
+            font-size: 1.8em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-bottom: 2px solid var(--header-color);
+            padding-bottom: 5px;
+        }
+
+        .location, .job-status {
+            color: var(--secondary-color);
+            margin-bottom: 5px;
+        }
+
+        .bio {
+            margin-bottom: 20px;
+        }
+
+        .sections {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .work, .projects, .education {
+            margin-bottom: 30px;
+        }
+
+        .item h3 {
+            color: var(--highlight-color);
+            margin-bottom: 5px;
+        }
+
+        .item .date {
+            color: var(--secondary-color);
+            font-size: 0.9em;
+            margin-bottom: 5px;
+        }
+
+        .item p {
+            margin-top: 0;
+        }
+
+        #mode-toggle {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1.5em;
+            color: var(--text-color);
+        }
+
+        .contact-info {
+            margin-top: 20px;
+        }
+
+        .contact-info a {
+            color: var(--link-color);
+            text-decoration: underline;
+            margin-right: 15px;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        @media (min-width: 1024px) {
+            main {
+                margin-top: 40px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            main {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <nav>
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#experience">Experience</a>
+            </nav>
+            <button id="mode-toggle">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+        <h1>Basil Yusuf</h1>
+        <p class="job-status">Software Engineer | Researcher | Reader</p>
+    </header>
+
+    <main>
+        <p class="location">Toronto, Ontario</p>
+        <p class="job-status">Software Engineer | Researcher | Reader</p>
+
+        <div id="about" class="bio">
+            <p>I am deeply passionate about distributed systems, infrastructure and container orchestration. What truly amazes me is how things break in often unpredictable ways as systems scale. It's like watching a high-stakes game of Jenga played out in code and infrastructure. Each optimization, each new layer of complexity, adds both power and fragility. I'm obsessed with finding that sweet spot where performance, reliability, and maintainability converge, always pushing the envelope of what's possible in large-scale distributed computing.</p>
+            <p>If you share the same level of passion as me, feel free to reach out to me on X.</p>
+        </div>
+
+        <div id="projects" class="projects">
+            <h2>Projects (2024)</h2>
+            <div class="item">
+                <h3>distributed systems</h3>
+                <p>Comprehensive guide and algorithms on distributed systems implemented in Zig</p>
+            </div>
+            <div class="item">
+                <h3>chsim</h3>
+                <p>Consistent hashing ring simulation in Zig</p>
+            </div>
+            <div class="item">
+                <h3>lsm trees</h3>
+                <p>Ground up implementation of LSM trees in C++</p>
+            </div>
+            <div class="item">
+                <h3>dockermake</h3>
+                <p>Add a Makefile for your Docker (made after a Reddit post got 100k views)</p>
+            </div>
+            <div class="item">
+                <h3>dynamodb</h3>
+                <p>Deep dive into the architecture of Amazon's DynamoDB</p>
+            </div>
+            <div class="item">
+                <h3>kubernetes</h3>
+                <p>Completed a beginner course on Kubernetes</p>
+            </div>
+        </div>
+
+        <div id="experience" class="work">
+            <h2>Work Experience</h2>
+            <div class="item">
+                <h3>Deloitte - Backend & Infrastructure Engineer (Contract)</h3>
+                <p class="date">Sep 2023 - July 2024</p>
+                <p>Implemented CD, AWS Lambda Scheduler, Application Load Balancer, and more.</p>
+            </div>
+            <div class="item">
+                <h3>Amazon - Software Engineer Intern</h3>
+                <p class="date">May 2023 - Aug 2023</p>
+                <p>Engineered web app for Amazon Kids+, improved subscription service, deployed VPC and AWS Lambda infrastructure.</p>
+            </div>
+            <div class="item">
+                <h3>University of Guelph - Undergraduate Researcher (C++)</h3>
+                <p class="date">May 2023 - Aug 2023</p>
+                <p>Developed modular TCP server using advanced OOP design patterns.</p>
+            </div>
+            <div class="item">
+                <h3>TD Bank - Software Engineer Intern</h3>
+                <p class="date">Jan 2023 - Apr 2023</p>
+                <p>Migrated SOAP API endpoints to REST API, developed XML parser.</p>
+            </div>
+            <div class="item">
+                <h3>Interac - Software Engineer Intern (Platform and Cloud Architecture)</h3>
+                <p class="date">Sep 2022 - Dec 2022</p>
+                <p>Developed authentication infrastructure for Interac e-Transfers, contributed to Digital Platform architecture.</p>
+            </div>
+        </div>
+
+        <div class="education">
+            <h2>Education</h2>
+            <div class="item">
+                <h3>University of Guelph</h3>
+                <p class="date">Sep 2020 - Apr 2024</p>
+                <p>Bachelor of Computing, Computer Science and Economics</p>
+                <p>cGPA: 3.70, Research Assistant (C++ Networking) and Teaching Assistant (Java Object-oriented Programming)</p>
+            </div>
+        </div>
+
+        <div class="contact-info">
+            <a href="https://twitter.com/basilyusuf1709" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+            <a href="https://github.com/basilysf1709" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+            <a href="mailto:basilyusuf1709@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+        </div>
+    </main>
+
+    <script>
+        const modeToggle = document.getElementById('mode-toggle');
+        const body = document.body;
+        const modeIcon = modeToggle.querySelector('i');
+
+        modeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            if (body.classList.contains('dark-mode')) {
+                modeIcon.classList.remove('fa-moon');
+                modeIcon.classList.add('fa-sun');
+            } else {
+                modeIcon.classList.remove('fa-sun');
+                modeIcon.classList.add('fa-moon');
+            }
+        });
+    </script>
+</body>
+</html>
